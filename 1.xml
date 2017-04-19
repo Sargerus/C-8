@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<head>
+  <Student Number="0">
+    <Name>Кулич </Name>
+    <Surname>Павел</Surname>
+    <LastName>Васильевич</LastName>
+    <Age>18</Age>
+    <Sex>Мужской</Sex>
+    <Course>3</Course>
+    <Proffesion>Информационные системы и технологии</Proffesion>
+    <Group>1</Group>
+    <City>ывамыв</City>
+    <House>32</House>
+    <Street>ыфа</Street>
+    <Index>324</Index>
+    <Date>06.04.2017</Date>
+  </Student>
+  <Student Number="1">
+    <Name>Бузанов</Name>
+    <Surname>Димка</Surname>
+    <LastName>Батькович</LastName>
+    <Age>18</Age>
+    <Sex>Женский</Sex>
+    <Course>1</Course>
+    <Proffesion>Информационные системы и технологии</Proffesion>
+    <Group>3</Group>
+    <City>минск</City>
+    <House>11</House>
+    <Street>ура</Street>
+    <Index>111</Index>
+    <Date>29.04.2017</Date>
+  </Student>
+  <Student Number="2">
+    <Name>пуЙша</Name>
+    <Surname>Игорь</Surname>
+    <LastName>осипович</LastName>
+    <Age>15</Age>
+    <Sex>Мужской</Sex>
+    <Course>4</Course>
+    <Proffesion>Программное обеспечение и безопасность мобильных систем</Proffesion>
+    <Group>3</Group>
+    <City>осиповичи</City>
+    <House>65</House>
+    <Street>зеленая</Street>
+    <Index>228</Index>
+    <Date>24.04.2017</Date>
+  </Student>
+  <Student Number="3">
+    <Name>Кирилл</Name>
+    <Surname>Сергей</Surname>
+    <LastName>Валерий</LastName>
+    <Age>28</Age>
+    <Sex>Женский</Sex>
+    <Course>2</Course>
+    <Proffesion>Дизайн электронных  и веб изданий</Proffesion>
+    <Group>2</Group>
+    <City>черивок</City>
+    <House>12</House>
+    <Street>ааа</Street>
+    <Index>543</Index>
+    <Date>30.04.2017</Date>
+  </Student>
+  <Student Number="4">
+    <Name>якубейка</Name>
+    <Surname>юля</Surname>
+    <LastName>юльевна</LastName>
+    <Age>25</Age>
+    <Sex>Мужской</Sex>
+    <Course>4</Course>
+    <Proffesion>Программное обеспечение информационных технологий</Proffesion>
+    <Group>3</Group>
+    <City>витебска</City>
+    <House>8</House>
+    <Street>трава</Street>
+    <Index>888</Index>
+    <Date>30.04.2017</Date>
+  </Student>
+</head>
