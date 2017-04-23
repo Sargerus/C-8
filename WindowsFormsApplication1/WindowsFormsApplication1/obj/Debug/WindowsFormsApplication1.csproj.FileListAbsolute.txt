@@ -16,3 +16,4 @@ E:\4 семестр\c#\8\WindowsFormsApplication1\WindowsFormsApplication1\obj\D
 E:\4 семестр\c#\8\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 E:\4 семестр\c#\8\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 E:\4 семестр\c#\8\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\4 семестр\c#\8\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources

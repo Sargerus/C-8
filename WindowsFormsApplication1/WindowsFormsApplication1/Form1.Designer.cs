@@ -68,6 +68,7 @@
             this.info = new System.Windows.Forms.TextBox();
             this.writebutton = new System.Windows.Forms.Button();
             this.readbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.coursebox.SuspendLayout();
             this.grouppanel.SuspendLayout();
             this.sexpanel.SuspendLayout();
@@ -486,11 +487,22 @@
             this.readbutton.UseVisualStyleBackColor = true;
             this.readbutton.Click += new System.EventHandler(this.readbutton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(476, 256);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 50);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Поиск";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 488);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.readbutton);
             this.Controls.Add(this.writebutton);
             this.Controls.Add(this.info);
@@ -570,6 +582,7 @@
         private System.Windows.Forms.TextBox info;
         private System.Windows.Forms.Button writebutton;
         private System.Windows.Forms.Button readbutton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
