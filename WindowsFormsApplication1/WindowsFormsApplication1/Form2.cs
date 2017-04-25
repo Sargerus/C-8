@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
 
 namespace WindowsFormsApplication1
 {
@@ -29,6 +30,7 @@ namespace WindowsFormsApplication1
 
         string pattern;
 
+        DateTime today = DateTime.Today;
         public Form2()
         {
             xd = XDocument.Load(@"e:\4 семестр\c#\8\1.xml");
@@ -46,9 +48,9 @@ namespace WindowsFormsApplication1
                             g.Element("Age").Value, g.Element("Sex").Value, g.Element("Course").Value, g.Element("Proffesion").Value,
                             g.Element("Group").Value, g.Element("City").Value, g.Element("House").Value, g.Element("Street").Value,
                             g.Element("Index").Value, g.Element("Date").Value)).ToList();
-                                
-            
             InitializeComponent();
+            statuslabel.Text = "Total object(s): " + toprint.Count + " Act: NoNe " +
+                        "Today and now: " + today;
         }
 
         private void b1_Click(object sender, EventArgs e)
@@ -87,11 +89,21 @@ namespace WindowsFormsApplication1
                     buffer = toprint;
                     foreach (var g in toprint)
                         vivod.AppendText(g.ToString());
-                }
-                
-            
-  
 
+
+                    var results = new List<ValidationResult>();
+                    var context = new ValidationContext(toprint[0]);
+
+                    if (!Validator.TryValidateObject(toprint[0], context, results))
+                    {
+                        foreach(var error in results)
+                            MessageBox.Show(error.ErrorMessage);
+                    }
+                }
+
+
+                statuslabel.Text = "Total object(s): " + toprint.Count + " Act: Search by surname " + 
+                    "Today and now: " + today;
         }
             
         private void b2_Click(object sender, EventArgs e)
@@ -130,6 +142,8 @@ namespace WindowsFormsApplication1
                 foreach (var g in toprint)
                     vivod.AppendText(g.ToString());
             }
+            statuslabel.Text = "Total object(s): " + toprint.Count + " Act: Search by proffesion " +
+                   "Today and now: " + today;
             
             
         }
@@ -170,6 +184,10 @@ namespace WindowsFormsApplication1
                 foreach (var g in toprint)
                     vivod.AppendText(g.ToString());
             }
+
+            statuslabel.Text = "Total object(s): " + toprint.Count + " Act: Search by course " +
+               "Today and now: " + today;
+        
             
         }
 
@@ -208,7 +226,21 @@ namespace WindowsFormsApplication1
                 buffer = toprint;
                 foreach (var g in toprint)
                     vivod.AppendText(g.ToString());
+
+                var results = new List<ValidationResult>();
+                var context = new ValidationContext(toprint[0]);
+
+                
+                if (!Validator.TryValidateObject(toprint[0], context, results,true))
+                {
+                    foreach (var error in results)
+                        MessageBox.Show(error.ErrorMessage);
+                }
             }
+
+            statuslabel.Text = "Total object(s): " + toprint.Count + " Act: Search by age " +
+               "Today and now: " + today;
+        
             
         }
 
@@ -308,17 +340,23 @@ namespace WindowsFormsApplication1
         }
     }
 
-    [Serializable] public class Student
+    [Serializable] 
+    public class Student
     {
+        [Required (ErrorMessage="Поле должно быть обязательно установлено")]
+        [StringLength (50,MinimumLength=3, ErrorMessage = "Длина имени должна быть больше трех символов")]
         public string StudName { get; set; }
         public string StudSurname { get; set; }
 
         public string StudLastName { get; set; }
 
+        [StringLength (2,ErrorMessage="Длина строки не более 2 символов!!!")]
         public string StudAge { get; set; }
 
+        [SexCheck]
         public string StudSex { get; set; }
 
+        
         public string StudCourse { get; set; }
 
         public string StudProffesion { get; set; }
@@ -331,6 +369,7 @@ namespace WindowsFormsApplication1
 
         public string StudStreet { get; set; }
 
+        [StringLength (7)]
         public string StudIndex { get; set; }
 
         public string StudDate { get; set; }
@@ -378,4 +417,20 @@ namespace WindowsFormsApplication1
         }
     }
 
+    public class SexCheckAttribute : ValidationAttribute
+    {
+        public override bool IsValid(object value)
+        {
+            if(value!=null)
+            {
+                string buf = value.ToString();
+                if (buf == "м")
+                    return true;
+                if (buf.Equals("ж"))
+                    return true;
+                ErrorMessage = "Либо м, либо ж!!!";
+            }
+            return false;
+        }
+    }
 }

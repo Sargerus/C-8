@@ -75,4 +75,19 @@
     <Index>888</Index>
     <Date>30.04.2017</Date>
   </Student>
+<Student Number="0">
+    <Name>Кулич</Name>
+    <Surname>Павел</Surname>
+    <LastName>Васильевич</LastName>
+    <Age>102</Age>
+    <Sex>Мужской</Sex>
+    <Course>3</Course>
+    <Proffesion>Информационные системы и технологии</Proffesion>
+    <Group>1</Group>
+    <City>ывамыв</City>
+    <House>32</House>
+    <Street>ыфа</Street>
+    <Index>324</Index>
+    <Date>06.04.2017</Date>
+  </Student>
 </head>
